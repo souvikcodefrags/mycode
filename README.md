@@ -14,3 +14,17 @@ function charFrequency(str){
 charFrequency('startstomototowardswarofwords');
 ```
 
+Another one: check if a number is binary without converting it to string:
+
+```
+function isBin(num){
+  var isBin=true
+  Array.from(''+num).forEach((elem)=>{
+    +elem===0?null:+elem===1?null:isBin=false
+  })
+  return isBin
+}
+console.log(isBin(39101))
+```
+Weird thing was when I input 001100100, the answer is false. I checked, the nuber is getting converted to 294976 somehow, no idea why. Same result when I just type 001100100 in the console and press enter.
+
