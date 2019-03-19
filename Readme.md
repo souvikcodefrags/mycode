@@ -45,13 +45,17 @@ function transform(value) {
   
  console.log(transform('the return of the planet of the apes')) 
  ```
-Question: How do you find the missing numbers in a given sorted integer array of m to n? only 1 continuous number missing at a time.
+Question: How do you find the missing numbers in a given sorted integer array of m to n?
 ```
-var a = [203, 205,206,208,210]; 
-a.map((e,indx)=>{
-  if(indx+1<a.length && e+1 !== a[indx+1])
-  console.log(e+1, indx+1)
-})
+var foundMissing =(start, end, iarr) =>{
+  for (var i=start; i<=end; i++){
+    if(iarr.indexOf(i) ===-1 )
+    console.log(i)
+  }  
+}
+// Call the function
+foundMissing(201, 210, [201,202, 205, 209]);
+//output: 203/ 204/ 206/ 207/ 208/ 210
 ```
 Question: Count the number of occurances of each character in a given string
 ```
