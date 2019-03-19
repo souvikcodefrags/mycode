@@ -13,6 +13,24 @@ function charFrequency(str){
 //charFrequency('strong arm mishmash or staggering high treason');
 charFrequency('startstomototowardswarofwords');
 ```
+Alternate Solution: Character occurence count
+```
+var str = "I want to count the number of occurances of each char in this string";
+var counts = {};
+var ch, index, len, count;
+
+for (index = 0, len = str.length; index < len; ++index) {
+  ch = str.charAt(index);
+  
+  // 'count' will be `undefined` if we don't know this character yet
+  // otherwise, 'count' will have the current occurence count of that character
+  count = counts[ch]; 
+  
+  // if 'count is truthy, increase the current count by 1
+  // otherwise, if 'count' is falsie, then add the character as property with 1 count
+  counts[ch] = count ? count + 1 : 1; 
+}
+```
 
 Another one: check if a number is binary without converting it to string:
 
@@ -57,21 +75,4 @@ var foundMissing =(start, end, iarr) =>{
 foundMissing(201, 210, [201,202, 205, 209]);
 //output: 203/ 204/ 206/ 207/ 208/ 210
 ```
-Question: Count the number of occurances of each character in a given string
-```
-var str = "I want to count the number of occurances of each char in this string";
-var counts = {};
-var ch, index, len, count;
 
-for (index = 0, len = str.length; index < len; ++index) {
-  ch = str.charAt(index);
-  
-  // 'count' will be `undefined` if we don't know this character yet
-  // otherwise, 'count' will have the current occurence count of that character
-  count = counts[ch]; 
-  
-  // if 'count is truthy, increase the current count by 1
-  // otherwise, if 'count' is falsie, then add the character as property with 1 count
-  counts[ch] = count ? count + 1 : 1; 
-}
-```
