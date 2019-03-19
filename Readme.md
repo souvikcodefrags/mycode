@@ -45,3 +45,29 @@ function transform(value) {
   
  console.log(transform('the return of the planet of the apes')) 
  ```
+Question: How do you find the missing numbers in a given sorted integer array of m to n? only 1 continuous number missing at a time.
+```
+var a = [203, 205,206,208,210]; 
+a.map((e,indx)=>{
+  if(indx+1<a.length && e+1 !== a[indx+1])
+  console.log(e+1, indx+1)
+})
+```
+Question: Count the number of occurances of each character in a given string
+```
+var str = "I want to count the number of occurances of each char in this string";
+var counts = {};
+var ch, index, len, count;
+
+for (index = 0, len = str.length; index < len; ++index) {
+  ch = str.charAt(index);
+  
+  // 'count' will be `undefined` if we don't know this character yet
+  // otherwise, 'count' will have the current occurence count of that character
+  count = counts[ch]; 
+  
+  // if 'count is truthy, increase the current count by 1
+  // otherwise, if 'count' is falsie, then add the character as property with 1 count
+  counts[ch] = count ? count + 1 : 1; 
+}
+```
