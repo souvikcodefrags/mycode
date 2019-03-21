@@ -46,7 +46,7 @@ function isBin(num){
 }
 console.log(isBin(39101))
 ```
---Weird thing was when I input 001100100, the answer is false. I checked, the nuber is getting converted to 294976 somehow, no idea why. Same result when I just type 001100100 in the console and press enter--
+*Weird thing was when I input 001100100, the answer is false. I checked, the nuber is getting converted to 294976 somehow, no idea why. Same result when I just type 001100100 in the console and press enter*
 
 #### A function which convert words of a sentence to Title Case except for articles and prepositions (if they are not at the begining of the sentence)
 ```javascript
