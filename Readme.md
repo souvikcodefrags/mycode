@@ -77,4 +77,18 @@ var foundMissing =(start, end, iarr) =>{
 foundMissing(201, 210, [201,202, 205, 209]);
 //output: 203/ 204/ 206/ 207/ 208/ 210
 ```
-
+#### How do you find the duplicate number on a given integer array?
+```javascript
+var findDuplicates = (theArray)=>{
+  var dups =new Object();
+  theArray.map(el=>{
+    if(dups.hasOwnProperty(''+el))
+    console.log("Duplicate Found: ", el);  
+    dups[el]=null;
+  })
+  //console.log("Clean Array",dups)
+}
+//Function call, works with string arrays too
+findDuplicates([1,9,2,4,6,7,1,5,9,6,3,8,9,10]);
+findDuplicates(['I','am','who', 'I', 'am']);
+```
