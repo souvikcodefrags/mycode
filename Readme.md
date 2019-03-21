@@ -96,3 +96,13 @@ var findDuplicates = (theArray)=>{
 findDuplicates([1,9,2,4,6,7,1,5,9,6,3,8,9,10]); //Output: Duplicate Found: |1||9||6|
 findDuplicates(['I','am','who', 'I', 'am']); //Output: Duplicate Found: |I||am|
 ```
+#### Find the largest and smallest number in an unsorted integer array
+```javascript
+var findMinMax = (arr)=>{
+var h=a[1], l=a[0];
+a.map(el=>el>h?(h = el):el<l?(l=el):null;)
+console.log("--LOW--",l,"--HIGH--",h);
+}
+findMinMax([19, 21, 11, 7, 20, 1, 3, 17, 18, 12, 13, 14, 6, 10, 4]);
+//Output: --LOW-- 1 --HIGH-- 21
+```
