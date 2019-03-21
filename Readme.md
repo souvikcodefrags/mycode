@@ -1,6 +1,7 @@
 # MyCodeFragments
 These are code fragments that I came accross and though of keeping somewhere. 
-
+---
+---
 Today I gave code test at Agilysis. One of the question was, 
 #### count the frequency of characters in a given string. 
 Here is my solution (the one I wrote in the test was horrible!):
