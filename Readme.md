@@ -1,5 +1,5 @@
 # MyCodeFragments
-These are code fragments that I came accross and though of keeping somewhere. 
+### These are code fragments that I came accross and thought of keeping somewhere. 
 ---
 ---
 Today I gave code test at Agilysis. One of the question was, 
