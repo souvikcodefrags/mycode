@@ -100,7 +100,7 @@ findDuplicates(['I','am','who', 'I', 'am']); //Output: Duplicate Found: |I||am|
 ```javascript
 var findMinMax = (arr)=>{
     var l=arr[0], h=arr[1];
-    arr.map(el => el > h ? (h = el) : el < l ? (l=el) : null)
+    arr.map(el => el > h ? (h = el) : el < l ? (l = el) : null)
     console.log("--LOW--",l,"--HIGH--",h);
 }
 findMinMax([19, 21, 11, 7, 20, 1, 3, 17, 18, 12, 13, 14, 6, 10, 4]);
