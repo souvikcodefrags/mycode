@@ -1,5 +1,5 @@
-# mycode
-just for my code fragments
+# MyCodeFragments
+These are code fragments that I came accross and though of keeping somewhere. 
 
 Today I gave code test at Agilysis. One of the question was, 
 #### count the frequency of characters in a given string. 
@@ -81,14 +81,17 @@ foundMissing(201, 210, [201,202, 205, 209]);
 ```javascript
 var findDuplicates = (theArray)=>{
   var dups =new Object();
+  var showdups = "Duplicate Found: " 
   theArray.map(el=>{
-    if(dups.hasOwnProperty(''+el))
-    console.log("Duplicate Found: ", el);  
+    if(
+      dups.hasOwnProperty(''+el) && 
+      showdups.indexOf('|'+el+'|')===-1) {
+        showdups += '|'+el+'|';
+    }
     dups[el]=null;
   })
-  //console.log("Clean Array",dups)
+  console.log(showdups)
 }
-//Function call, works with string arrays too
-findDuplicates([1,9,2,4,6,7,1,5,9,6,3,8,9,10]);
-findDuplicates(['I','am','who', 'I', 'am']);
+findDuplicates([1,9,2,4,6,7,1,5,9,6,3,8,9,10]); //Output: Duplicate Found: |1||9||6|
+findDuplicates(['I','am','who', 'I', 'am']); //Output: Duplicate Found: |I||am|
 ```
